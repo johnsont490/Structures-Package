@@ -1,0 +1,24 @@
+[forces]
+[forces.force1]
+name = 'F1'
+position= 2
+magnitude= 20
+[forces.force_2]
+name = 'F2'
+position= 18
+magnitude= 20
+
+[UDL]
+[UDL.udl1]
+name='UF1'
+start= 2
+end = 18
+distributed_load = 10
+
+[fixed_support]
+name= 'yeet'
+position = 0
+
+[roller_support]
+name= 'yeet2'
+position = 20
