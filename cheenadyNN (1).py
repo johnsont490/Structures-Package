@@ -18,7 +18,7 @@ def cheenadyNN():
     from tensorflow.python.keras.wrappers.scikit_learn import KerasRegressor
     from keras import layers
     #load pickled dataframe
-    intrinsicdf=pd.read_pickle('C:\\Users\\johns\\OneDrive\\Desktop\\Python Project\\intrinsic_hardness1.pkl')
+    intrinsicdf=pd.read_pickle('intrinsic_hardness1.pkl')
     intrinsicdf = intrinsicdf.dropna(axis=0)
     target=intrinsicdf["intrinsic_hardness"]
     featuresdicseries=intrinsicdf["brgoch_feats"]
