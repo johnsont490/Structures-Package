@@ -1,3 +1,7 @@
+type = 'Cantilever'
+length=20
+height=1
+
 [forces]
 [forces.force1]
 name = 'F1'
@@ -15,10 +19,8 @@ start= 2
 end = 18
 distributed_load = 10
 
-[fixed_support]
-name= 'yeet'
-position = 0
-
-[roller_support]
-name= 'yeet2'
-position = 20
+[moments]
+[moments.moment1]
+name= 'M1'
+position = 5
+magnitude = 7
