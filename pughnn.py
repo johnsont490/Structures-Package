@@ -19,8 +19,7 @@ def pughNN():
     from keras import layers
 
     #load pickled dataframe
-    intrinsicdf=pd.read_pickle('C:\\Users\\johns\\OneDrive\\Desktop\\Python Project\\intrinsic_hardness1.pkl')
-    pughdf=pd.read_pickle("C:\\Users\\johns\\OneDrive\\Desktop\\Python Project\\pugh_hardness.pkl")
+    pughdf=pd.read_pickle("pugh_hardness.pkl")
 
     #starting with pugh hardness 
     from sklearn.preprocessing import StandardScaler
