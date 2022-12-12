@@ -2,10 +2,7 @@
 # coding: utf-8
 
 # In[ ]:
-
-
-from BeamSolver.beam import *
-
+from _beam import *
 class Supported_Beam(Beam):    
     """
     Creates a customizable beam object, also includes methods to present the Freebody Diagram
@@ -16,7 +13,6 @@ class Supported_Beam(Beam):
     y_pos = 3.0
     p0 = Point(x_pos, y_pos)
     scaled_length= 10
-    
     def __init__(self, length, height):
         """
         Initializing the beam properties, additional properties will be added on top
@@ -27,7 +23,7 @@ class Supported_Beam(Beam):
         self.length = length
         self.height = 1
         self.beam_height = height
-        self.main = Rectangle(self.p0, self.scaled_length, height).set_fill_pattern(Style.FillPattern.UP_LEFT_TO_RIGHT)
+        self.main = Rectangle(self.p0, self.scaled_length, self.height).set_fill_pattern(Style.FillPattern.UP_LEFT_TO_RIGHT)
         self.composition={"main": self.main}
         #self.force_dictionary={}
         self.force_dictionary={'magnitude':[],'position':[],'type':[]}

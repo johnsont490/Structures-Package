@@ -1,8 +1,9 @@
 
+from supported_beam import *
+from cantilever_beam import *
+import tomli
+
 def read_properties(filename):
-    import tomli
-    from BeamSolver.supported_beam import Supported_Beam
-    from BeamSolver.cantilever_beam import Cantilever_Beam
     with open(filename,"rb") as f:
         data = tomli.load(f)
         beam_type = data['type'].lower()

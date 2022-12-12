@@ -33,7 +33,6 @@ class Beam:
     y_pos = 3.0
     p0 = Point(x_pos, y_pos)
     scaled_length= 10
-    
     def __init__(self, length, height):
         """
         Initializing the beam properties, additional properties will be added on top
@@ -45,7 +44,7 @@ class Beam:
         self.length = length
         self.height = 1
         self.beam_height = height
-        self.main = Rectangle(self.p0, self.scaled_length, height).set_fill_pattern(Style.FillPattern.UP_LEFT_TO_RIGHT)
+        self.main = Rectangle(self.p0, self.scaled_length, self.height).set_fill_pattern(Style.FillPattern.UP_LEFT_TO_RIGHT)
         self.composition={"main": self.main}
         #self.force_dictionary={}
         self.force_dictionary={'magnitude':[],'position':[],'type':[]}
