@@ -436,7 +436,7 @@ class Cantilever_Beam(Beam):
         
         self.moment_dictionary['magnitude'].append(sum_moments_and_couples)
         self.moment_dictionary['position'].append(0)
-        self.moment_dictionary['name'].append("M")
+        self.moment_dictionary['name'].append("RM1")
     
         #Solving for support reactions and giving values to the support dictionary.
         self.support_dictionary['magnitude'].append(sum_force_reactions)
