@@ -339,8 +339,8 @@ class Supported_Beam(Beam):
         """
         if (self.fixed_support_exist != True or self.roller_support_exist!= True):
             raise ValueError("The beam is not static and requires an additional support")
-        A=np.ones([2,len(self.support_dictionary['magnitude'])])
-        B=np.empty([1,len(self.support_dictionary['magnitude'])])
+        A=np.ones([2,len(self.support_dictionary['position'])])
+        B=np.empty([1,len(self.support_dictionary['position'])])
         force= pd.DataFrame.from_dict(self.force_dictionary)
         moment= pd.DataFrame.from_dict(self.moment_dictionary)
         support = pd.DataFrame.from_dict(self.support_dictionary)
@@ -360,7 +360,7 @@ class Supported_Beam(Beam):
         B[0,0]= sum_force_reactions
         B[0,1] = sum_moments_and_couples
         A[1,0] = 0
-        A[1,1] = support['position'][1]
+        A[1,1] = (support['position'][1] - fixed_support_position)
         
         #Solving for support reactions and giving values to the support dictionary.
         support['magnitude']= np.linalg.solve(A, np.transpose(B))
