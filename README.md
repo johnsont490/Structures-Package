@@ -44,3 +44,5 @@ This module was developed to predict hardness from material data using neural ne
 
 ### Outputs
 * prediction for material hardness
+
+***calculations for Cheenady hardness were made using modules from https://github.com/salil91/intrinsic-hardness
