@@ -68,7 +68,7 @@ from makehardnessprediction import makehardnessprediction
 input materials data and model type as the arguments for the function below:
 makehardnessprediction(inputdata,modeltype)
 
-### Modules within Package
+### Modules within Package:
 ### Modules used to create hardness data for training the neural networks:
 * pploaddata - used to generate and export hardness data from Pugh and Cheenady models
 * hardnesscalculator - used to calculate Cheenady hardness
