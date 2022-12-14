@@ -63,11 +63,23 @@ This module was developed to scrape data from material websites, specifically th
 ## Machine Learning Module
 This module was developed to predict hardness from material data using neural networks. These networks were trained on data using two different equations for calculating hardness- the Pugh model and the Cheenady model. Shear and bulk modulus data, and features data, respectively, were used to calculate hardness for a large number of materials, which was used as the target data to train the neural networks, which are able to calculate hardness in a way that is less computationally expensive.
 
+### Modules within Package
+## Modules used to create hardness data for training the neural networks:
+* pploaddata - used to generate and export hardness data from Pugh and Cheenady models
+* hardnesscalculator - used to calculate Cheenady hardness
+* bond_detector - used to determine number of bonds 
+ ***hardnesscalculator and bond_detector were made from https://github.com/salil91/intrinsic-hardness
+## Modules used to create neural networks
+* PughNNupd - neural network trained on Pugh hardness data
+* CheenadyNNupd - neural network trained on Pugh hardness data
+## Modules used to predict hardness from neural networks
+* makehardnessprediction - backend for user interface, used to make hardness prediction from neural network
+* Neural_Netuserinterface - user interface for the hardness prediction hardness prediction package 
+* NN_Example_Notebook - an example of how to use the hardness prediction package 
+
 ### Inputs
 * Model type (either Pugh or Cheenady)
 * Materials data- either shear and bulk modulus (for Pugh) or features data (for Cheenady) 
 
 ### Outputs
 * prediction for material hardness
-
-***calculations for Cheenady hardness were made using modules from https://github.com/salil91/intrinsic-hardness
