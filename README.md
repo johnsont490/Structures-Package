@@ -62,6 +62,11 @@ This module was developed to scrape data from material websites, specifically th
 
 ## Machine Learning Module
 This module was developed to predict hardness from material data using neural networks. These networks were trained on data using two different equations for calculating hardness- the Pugh model and the Cheenady model. Shear and bulk modulus data, and features data, respectively, were used to calculate hardness for a large number of materials, which was used as the target data to train the neural networks, which are able to calculate hardness in a way that is less computationally expensive.
+### Importing the Package
+from makehardnessprediction import makehardnessprediction
+### Using the Package 
+input materials data and model type as the arguments for the function below:
+makehardnessprediction(inputdata,modeltype)
 
 ### Modules within Package
 ### Modules used to create hardness data for training the neural networks:
