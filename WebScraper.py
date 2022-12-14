@@ -33,7 +33,7 @@ def scraper():
     for materialtxtfile in materiallist:
         
         #setting file path
-        inputdata = Path.cwd() / "data" / "config_files" / "Materials" / materialtxtfile
+        inputdata = Path.cwd() / "data"  / "Materials" / materialtxtfile
         
         #open material text filers
         with open(inputdata) as f:
@@ -300,6 +300,7 @@ def material_selection(beamobject):
     from BeamSolver import Supported_Beam
     import numpy as np
     
+    #/ "data" / 
     #setting file path
     csvfile = Path.cwd() / "data" / "MaterialProperties.csv"
     data = pd.read_csv(csvfile)
