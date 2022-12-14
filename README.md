@@ -66,6 +66,7 @@ This module was developed to predict hardness from material data using neural ne
 from makehardnessprediction import makehardnessprediction
 ### Using the Package 
 input materials data and model type as the arguments for the function below:
+
 makehardnessprediction(inputdata,modeltype)
 
 ### Modules within Package:
