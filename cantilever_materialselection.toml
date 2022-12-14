@@ -1,0 +1,26 @@
+type = 'Cantilever'
+length=20
+height=1
+
+[forces]
+[forces.force1]
+name = 'F1'
+position= 2
+magnitude= 8000000
+[forces.force_2]
+name = 'F2'
+position= 18
+magnitude= 8000000
+
+[UDL]
+[UDL.udl1]
+name='UF1'
+start= 2
+end = 18
+distributed_load = 8000000
+
+[moments]
+[moments.moment1]
+name= 'M1'
+position = 5
+magnitude = 8000000
