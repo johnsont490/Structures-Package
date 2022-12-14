@@ -35,6 +35,31 @@ the details of the beam.
 
 *All attributes of the beam object can also be saved as variables for any further personal calculations*
 
+## WebScraper Module
+This module was developed to scrape data from material websites, specifically the material names and their density, yield strength, and elastic modulus. This information is then used to create a Pandas DataFrame and save it as a csv file. Additionally, this module can select an optimal material for the beam case in the Beam Solver module by calculating the max von Mises stress of the beam and comparing it to the yield strength's in the DataFrame. If the max von Mises stress of the beam is greater than all yield strength's, then there is no optimal material for that case. 
+
+### Inputs:
+**Scraper**:
+  * None
+
+**Material Selection**:
+  * Beam object from Beam Solver module
+ 
+### Outputs:
+**Scraper**:
+   * Pandas DataFrame of materials and their respective properties
+
+**Material Selection**:
+   * Max von Mises stress of beam (MPa)
+   * Optimal Material
+   * Material's Density (kg/cm3)
+   * Material's Yield Strength (MPa)
+   * Material's Elastic Modulus (GPa)
+   * Material's website
+   * If no optimal material, then statement saying so
+ 
+ *Material Selection can be done for beam's created manually or from config files*
+
 ## Machine Learning Module
 This module was developed to predict hardness from material data using neural networks. These networks were trained on data using two different equations for calculating hardness- the Pugh model and the Cheenady model. Shear and bulk modulus data, and features data, respectively, were used to calculate hardness for a large number of materials, which was used as the target data to train the neural networks, which are able to calculate hardness in a way that is less computationally expensive.
 
@@ -44,3 +69,5 @@ This module was developed to predict hardness from material data using neural ne
 
 ### Outputs
 * prediction for material hardness
+
+***calculations for Cheenady hardness were made using modules from https://github.com/salil91/intrinsic-hardness
