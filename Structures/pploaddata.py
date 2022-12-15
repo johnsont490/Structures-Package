@@ -6,8 +6,8 @@ Created on Sat Nov  5 14:35:02 2022
 """
 #loads the data from matminer and uses pymatgen to find material structure 
 from matminer.datasets import load_dataset
-from hardnesscalculator import calculate_hardness
-from bond_detector import detect_bonds
+from Structures.hardnesscalculator import calculate_hardness
+from Structures.bond_detector import detect_bonds
 import pandas as pd
 import pymatgen 
 

@@ -2,8 +2,8 @@
 # module for prediction hardness from neural network models 
  
 #load the neural network modules 
-from CheenadyNNupd import predictCheenadyhardness
-from PughNNupd import predictPughhardness
+from Structures.CheenadyNNupd import predictCheenadyhardness
+from Structures.PughNNupd import predictPughhardness
 
 #function to predict hardness from a given model and xlsx file containing material data 
 def makehardnessprediction(modeltype,inputdata):
