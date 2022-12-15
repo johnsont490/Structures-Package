@@ -295,9 +295,9 @@ def material_selection(beamobject):
     """
     
     #import necessary modules and functions
-    from BeamSolver import read_properties 
-    from BeamSolver import Cantilever_Beam
-    from BeamSolver import Supported_Beam
+    from Structures.BeamSolver import read_properties 
+    from Structures.BeamSolver import Cantilever_Beam
+    from Structures.BeamSolver import Supported_Beam
     import numpy as np
     
     #/ "data" / 
